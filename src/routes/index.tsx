@@ -1,24 +1,45 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { PrefsProvider } from "@/components/portal/prefs";
+import { UtilityBar, SiteHeader } from "@/components/portal/Header";
+import { Hero, SideDock, StatsStrip } from "@/components/portal/Hero";
+import { AlertBanner, ServicesGrid, Triage, Roadmap } from "@/components/portal/Sections";
+import { SchemesDirectory, OfficeDirectory, DocumentGuide, TrustSection } from "@/components/portal/Directory";
+import { Footer, Saathi } from "@/components/portal/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "AapdaSahai — Disaster Assistance & Recovery Portal, Moradabad" },
+      { name: "description", content: "Find disaster relief schemes, document recovery help, district offices and step-by-step recovery plans for Moradabad, UP." },
+      { property: "og:title", content: "AapdaSahai — Disaster Assistance & Recovery Portal" },
+      { property: "og:description", content: "Citizen disaster relief and recovery guidance for Moradabad, Uttar Pradesh." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <PrefsProvider>
+      <UtilityBar />
+      <SiteHeader />
+      <main id="main">
+        <Hero />
+        <StatsStrip />
+        <AlertBanner />
+        <ServicesGrid />
+        <Triage />
+        <Roadmap />
+        <SchemesDirectory />
+        <OfficeDirectory />
+        <DocumentGuide />
+        <TrustSection />
+      </main>
+      <Footer />
+      <SideDock />
+      <Saathi />
+    </PrefsProvider>
   );
 }
