@@ -19,13 +19,14 @@ export const categories = [
   "Active Alerts",
 ];
 
+// Honest prototype facts — no fabricated impact numbers.
 export const stats = [
-  { v: "18,450+", l: "Citizens Guided & Assisted" },
-  { v: "₹4.82+ Cr", l: "Relief Funds Facilitated" },
-  { v: "42 Active", l: "District Relief Camps & Shelters" },
-  { v: "120+", l: "Verified Government Schemes" },
-  { v: "3,290+", l: "Digital Document Recoveries" },
-  { v: "100%", l: "Verified Official District Sources" },
+  { v: "6", l: "Relief Schemes Mapped" },
+  { v: "5", l: "Tehsils Covered" },
+  { v: "6", l: "Nodal Offices Listed" },
+  { v: "4-Step", l: "Recovery Roadmap" },
+  { v: "2", l: "Languages Supported" },
+  { v: "0", l: "Cost to Citizens" },
 ];
 
 export type Scheme = {

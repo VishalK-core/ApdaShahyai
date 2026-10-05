@@ -88,7 +88,7 @@ export function SideDock() {
 
 export function StatsStrip() {
   return (
-    <section aria-label="Live citizen impact" className="border-b border-border bg-background">
+    <section aria-label="What this prototype covers" className="border-b border-border bg-background">
       <div className="mx-auto grid max-w-7xl grid-cols-2 divide-border md:grid-cols-3 lg:grid-cols-6 lg:divide-x">
         {stats.map((s) => (
           <div key={s.l} className="px-4 py-6 text-center">
@@ -97,7 +97,6 @@ export function StatsStrip() {
           </div>
         ))}
       </div>
-      <p className="pb-2 text-center text-[0.65rem] text-muted-foreground">[DEMO DATA - MORADABAD PILOT]</p>
     </section>
   );
 }
