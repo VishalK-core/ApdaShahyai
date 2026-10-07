@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PrefsProvider } from "@/components/portal/prefs";
 import { UtilityBar, SiteHeader } from "@/components/portal/Header";
-import { Hero, SideDock, StatsStrip } from "@/components/portal/Hero";
+import { Hero, SideDock } from "@/components/portal/Hero";
 import { AlertBanner, ServicesGrid, Triage, Roadmap } from "@/components/portal/Sections";
 import { SchemesDirectory, OfficeDirectory, DocumentGuide, TrustSection } from "@/components/portal/Directory";
 import { Footer, Saathi } from "@/components/portal/Footer";
@@ -27,7 +27,6 @@ function Index() {
       <SiteHeader />
       <main id="main">
         <Hero />
-        <StatsStrip />
         <AlertBanner />
         <ServicesGrid />
         <Triage />
