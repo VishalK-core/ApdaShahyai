@@ -19,15 +19,6 @@ export const categories = [
   "Active Alerts",
 ];
 
-// Honest prototype facts — no fabricated impact numbers.
-export const stats = [
-  { v: "6", l: "Relief Schemes Mapped" },
-  { v: "5", l: "Tehsils Covered" },
-  { v: "6", l: "Nodal Offices Listed" },
-  { v: "4-Step", l: "Recovery Roadmap" },
-  { v: "2", l: "Languages Supported" },
-  { v: "0", l: "Cost to Citizens" },
-];
 
 export type Scheme = {
   name: string;

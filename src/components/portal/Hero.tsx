@@ -86,17 +86,3 @@ export function SideDock() {
   );
 }
 
-export function StatsStrip() {
-  return (
-    <section aria-label="What this prototype covers" className="border-b border-border bg-background">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 divide-border md:grid-cols-3 lg:grid-cols-6 lg:divide-x">
-        {stats.map((s) => (
-          <div key={s.l} className="px-4 py-6 text-center">
-            <div className="font-serif text-2xl font-black text-navy">{s.v}</div>
-            <div className="mt-1 text-[0.7rem] font-semibold uppercase tracking-wider text-muted-foreground">{s.l}</div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
