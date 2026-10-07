@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Search, ChevronDown, BadgeCheck, Siren, MapPin, MessageCircle, Share2 } from "lucide-react";
 import hero from "@/assets/hero-relief.jpg";
-import { categories, trending, stats } from "./data";
+import { categories, trending } from "./data";
 import { usePrefs } from "./prefs";
 import { Emblem } from "./Header";
 
